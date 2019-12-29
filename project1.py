@@ -102,6 +102,7 @@ class ListOfRandomIntegers:
             Returns:
                 None
         '''
+        self.sequence = []
         for _ in range(self.LENGTH):
             self.sequence.append(random.randrange(self.LOWER, self.UPPER))
         print("\nSequence: {}\n".format(str(self.sequence)))
