@@ -2,7 +2,7 @@ import random
 
 
 class List_of_Random_Integers:
-    SEQUENCE = []
+    sequence = []
     LENGTH = None
     UPPER = None
     LOWER = None
@@ -58,21 +58,21 @@ class List_of_Random_Integers:
 
     def generateSequence(self):
         for _ in range(self.LENGTH):
-            self.SEQUENCE.append(random.randrange(self.LOWER, self.UPPER))
-        print("\nSequence: {}\n".format(str(self.SEQUENCE)))
+            self.sequence.append(random.randrange(self.LOWER, self.UPPER))
+        print("\nSequence: {}\n".format(str(self.sequence)))
         return None
 
     def getLength(self):
-        return len(self.SEQUENCE)
+        return len(self.sequence)
 
     def getSmallest(self):
-        return min(self.SEQUENCE)
+        return min(self.sequence)
 
     def getLargest(self):
-        return max(self.SEQUENCE)
+        return max(self.sequence)
 
     def getSum(self):
-        return sum(self.SEQUENCE)
+        return sum(self.sequence)
 
     def getAverage(self):
         return self.getSum()/self.getLength()
