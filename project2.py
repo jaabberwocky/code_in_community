@@ -5,11 +5,13 @@ class WordList:
 
     def __init__(self, path='word_list.txt'):
         '''
-        Params:
-            path - path to word list
+            Initialises WordList.
+            
+            Params:
+                path - path to word list
 
-        Returns:
-            None
+            Returns:
+                None
         '''
         with open(path) as f:
             line = f.readline()
