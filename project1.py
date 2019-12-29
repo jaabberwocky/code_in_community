@@ -53,7 +53,7 @@ class List_of_Random_Integers:
     def generateSequence(self):
         for _ in range(self.LENGTH):
             self.SEQUENCE.append(random.randrange(self.LOWER, self.UPPER))
-        print("Sequence: {}".format(str(self.SEQUENCE)))
+        print("\nSequence: {}\n".format(str(self.SEQUENCE)))
         return None
 
     def getLength(self):
@@ -83,8 +83,6 @@ if __name__ == "__main__":
     l.setLength()
     l.setLower()
     l.setUpper()
-    print("")
     l.generateSequence()
-    print("")
     l.printStats()
 
