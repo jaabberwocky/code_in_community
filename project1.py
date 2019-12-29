@@ -1,5 +1,6 @@
 import random
 
+
 class List_of_Random_Integers:
     SEQUENCE = []
     LENGTH = None
@@ -15,7 +16,8 @@ class List_of_Random_Integers:
             try:
                 self.LENGTH = int(length)
                 if self.LENGTH <= 0:
-                    print("Value given cannot be less than or equal to zero, please try again")
+                    print(
+                        "Value given cannot be less than or equal to zero, please try again")
                     continue
                 break
             except ValueError:
@@ -24,12 +26,14 @@ class List_of_Random_Integers:
 
     def setUpper(self):
         while True:
-            upper = input("Please enter the upper bound for the range of integer values:\t")
+            upper = input(
+                "Please enter the upper bound for the range of integer values:\t")
             try:
                 self.UPPER = int(upper)
                 if self.LOWER is not None:
                     if self.UPPER <= self.LOWER:
-                        print("Upper bound is lesser than or equal to lower bounds, please try again")
+                        print(
+                            "Upper bound is lesser than or equal to lower bounds, please try again")
                         continue
                 break
             except ValueError:
@@ -38,12 +42,14 @@ class List_of_Random_Integers:
 
     def setLower(self):
         while True:
-            lower = input("Please enter the lower bound for the range of integer values:\t")
+            lower = input(
+                "Please enter the lower bound for the range of integer values:\t")
             try:
                 self.LOWER = int(lower)
                 if self.UPPER is not None:
                     if self.LOWER >= self.UPPER:
-                        print("Lower bound is greater than or equal to upper bound, please try again")
+                        print(
+                            "Lower bound is greater than or equal to upper bound, please try again")
                         continue
                 break
             except ValueError:
@@ -70,13 +76,14 @@ class List_of_Random_Integers:
 
     def getAverage(self):
         return self.getSum()/self.getLength()
-    
+
     def printStats(self):
         print("List length: {}".format(self.getLength()))
         print("Largest integer: {}".format(self.getLargest()))
         print("Smallest integer: {}".format(self.getSmallest()))
         print("Sum: {}".format(self.getSum()))
         print("Average: {}".format(self.getAverage()))
+
 
 if __name__ == "__main__":
     l = List_of_Random_Integers()
@@ -85,4 +92,3 @@ if __name__ == "__main__":
     l.setUpper()
     l.generateSequence()
     l.printStats()
-
